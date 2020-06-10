@@ -1,0 +1,17 @@
+.header p{
+	font-size: 18px;
+}
+
+.container{
+	padding: 25px;
+	margin-top: 10vh;
+}
+.container .buttons button{
+	height: 40px;
+	font-size: 18px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+.container .buttons button:hover{
+	border: 2px solid black;
+}

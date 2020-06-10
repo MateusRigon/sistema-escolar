@@ -1,0 +1,36 @@
+body{
+	background-color: var(--light);
+}
+.container{
+	background-color: white;
+	height: auto;
+	width: 60%;
+	margin-top: 20vh;
+}
+.container .form-group input{
+	margin-bottom: 10px;
+	height: 40px;
+	outline: none;
+}
+.container .form-group label{
+	font-size: 18px;
+}
+.container .form-group button{
+	width: 20vw;
+	height: 8vh;
+	border: 1px solid black;
+}
+.header{
+	margin-left: 15vw;
+	margin-top: 10vh;
+	width: 70%;
+	align-items: center;
+}
+.header a{
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
+}
+.header span i{
+	margin-right: 10px;
+}

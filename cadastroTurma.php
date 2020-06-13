@@ -8,36 +8,44 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/cadastro.css">
-    <link rel="stylesheet" type="text/css" href="CSS/home.css">
+     <link rel="stylesheet" type="text/css" href="CSS/cadastroTurmas.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
-    <title>Home</title>
+    <title>Cadastro de Turmas</title>
   </head>
   <body>
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
-        <p>Logado como Admin!</p>
+        <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
     </div>
 
     <div class="container d-flex flex-column">
+      
+      <form class="form-group d-flex flex-column p-4">
+          <h1 class="mb-5 mt-3">Cadastro de turmas</h1>
+              <div class="d-flex flex-column">
+                <label for="desc">Descrição</label>
+                <textarea name="desc"></textarea>
+                </div>
+          <div class="d-flex">
+            <div class="d-flex flex-column pr-5">
+                <label for="vagas">Quantidade de vagas</label>
+               <input type="text" name="vagas">
+            </div>    
+            <div class="d-flex flex-column w-100">
+                <label for="professor">Professor regente</label>
+               <input type="text" name="professor">
+            </div>
   
-      <div class="d-flex">
-        <div class="buttons mb-3 d-flex flex-column w-50 mr-5">
-            <button onclick="window.location.href=''">Cadastrar novo aluno</button>
-        </div>
-        <div class="buttons d-flex flex-column w-50">
-          <button onclick="window.location.href=''">Cadastrar nova turma</button> 
-        </div>
-      </div>
-           <div class="buttons d-flex flex-column mb-3">
-            <button>Vincular alunos a turma</button>        
-        </div>
-
-        <div class="buttons d-flex flex-column">
-            <button>Consultar turmas e alunos</button>        
-        </div>
-         
+          </div>      
+                
+          
+            <div class="d-flex justify-content-center">
+            <button class="m-5">Enviar formulário</button>
+            </div>      
+    </form>  
     </div>
+    
 
 
 

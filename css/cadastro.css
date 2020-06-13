@@ -1,11 +1,14 @@
 body{
 	background-color: var(--light);
 }
+span{
+	color: #fc5e03;
+}
 .container{
 	background-color: white;
 	height: auto;
 	width: 60%;
-	margin-top: 20vh;
+	margin: 20vh auto 35vh auto;
 }
 .container .form-group input{
 	margin-bottom: 10px;
@@ -15,14 +18,8 @@ body{
 .container .form-group label{
 	font-size: 18px;
 }
-.container .form-group button{
-	width: 20vw;
-	height: 8vh;
-	border: 1px solid black;
-}
 .header{
-	margin-left: 15vw;
-	margin-top: 10vh;
+	margin: 10vh auto auto 15vw;
 	width: 70%;
 	align-items: center;
 }
@@ -33,4 +30,14 @@ body{
 }
 .header span i{
 	margin-right: 10px;
+}
+
+.form-group .requireDot{
+	color: red;
+}
+.form-group #select{
+	height: 40px;
+}
+#addMore{
+	color: #fc5e03;
 }

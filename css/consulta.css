@@ -1,0 +1,24 @@
+.container{
+	margin-top: 100px;
+	height: auto;
+}
+#buttons .button-group button{
+	width: 100px;
+	height: 50px;
+	border-radius: 8px;
+	font-size: 20px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+}
+#buttons .button-group button:hover{
+	border: 1px solid var(--light);
+}
+#turma{
+	border: 1px solid var(--warning);
+	background-color: var(--warning);
+}
+#aluno{
+	border: 1px solid var(--success);
+	background-color: var(--success);
+}

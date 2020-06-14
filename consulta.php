@@ -1,3 +1,8 @@
+<?php 
+    require 'php/db.php';
+    require 'php/classConsulta.php';
+    $c = new Consulta();
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -9,34 +14,44 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <link rel="stylesheet" type="text/css" href="CSS/home.css">
+    <link rel="stylesheet" type="text/css" href="CSS/consulta.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
-    <title>Home</title>
+    <title>Consulta</title>
   </head>
   <body>
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
-        <p>Logado como Admin!</p>
+        <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
     </div>
 
     <div class="container d-flex flex-column">
-  
-      <div class="d-flex">
-        <div class="buttons mb-3 d-flex flex-column w-50 mr-5">
-            <button onclick="window.location.href=''">Cadastrar novo aluno</button>
-        </div>
-        <div class="buttons d-flex flex-column w-50">
-          <button onclick="window.location.href=''">Cadastrar nova turma</button> 
-        </div>
-      </div>
-           <div class="buttons d-flex flex-column mb-3">
-            <button>Vincular alunos a turma</button>        
-        </div>
+        <form method="POST" class="p-4">
+            <h1 class="mb-5">Consultar</h1>
+            <div id="buttons" class="d-flex justify-content-around">
+                <div class="button-group d-flex flex-column">
+                    <button id="turma" name="turma">Turmas</button>
+                </div>
+                <div class="button-group d-flex flex-column">
+                    <button id="aluno" name="aluno">Alunos</button>
+                </div>
+            </div>
+        </form>
 
-        <div class="buttons d-flex flex-column">
-            <button>Consultar turmas e alunos</button>        
-        </div>
-         
+        <?php 
+            if(isset($_POST['turma'])){
+                $c->consultarTurma();
+                ?>
+                <div class="d-flex justify-content-center mt-2 mb-2"><?php echo $msg ?></div>
+                <?php
+            }
+            if(isset($_POST['aluno'])){
+                $c->consultarAluno();
+                ?>
+                <div class="d-flex justify-content-center mt-2 mb-2"><?php echo $msg ?></div>
+                <?php
+            }
+         ?>
     </div>
 
 

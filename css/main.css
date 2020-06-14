@@ -1,0 +1,25 @@
+body{
+	background-color: var(--light);
+}
+span{
+	color: #fc5e03;
+}
+.container{
+	background-color: white;
+	height: auto;
+	width: 60%;
+	margin: 20vh auto 35vh auto;
+}
+.header{
+	margin: 10vh auto auto 15vw;
+	width: 70%;
+	align-items: center;
+}
+.header a{
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
+}
+.header span i{
+	margin-right: 10px;
+}

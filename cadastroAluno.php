@@ -13,6 +13,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
     <link rel="stylesheet" type="text/css" href="CSS/cadastro.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
@@ -30,12 +31,12 @@
           <h1 class="mb-5 mt-3">Cadastro de alunos</h1>
               <div class="d-flex flex-column">
                 <label for="nome">Nome <span class="requireDot"> * </span></label>
-                <input type="text" name="nome" >
+                <input type="text" name="nome" required>
                 </div>
           <div class="d-flex">
             <div class="d-flex flex-column pr-5">
                 <label for="sexo">Sexo <span class="requireDot"> * </span></label>
-                <select id="select" name="sexo" required>
+                <select class="select" name="sexo" required>
                   <option disabled selected value id="primeiraOption">--Escolha o sexo--</option>
                   <option value="masc">Masculino</option>
                   <option value="femin">Feminino</option>
@@ -51,7 +52,9 @@
             <div class="d-flex">    
              <div class="d-flex flex-column w-50">
                 <label for="cidade">Cidade</label>
-               <input type="text" name="cidade">
+                <select class="select" name="cidade" required>
+                  <option disabled selected value="">Selecione a cidade</option>
+                </select>
             </div>
             
             </div>      
@@ -77,7 +80,7 @@
             </div>
             </div>
             <div class="d-flex justify-content-center">
-              <input class="mt-5 mb-4" type="submit" name="submit" value="Enviar formulário">
+              <input class="submit mt-5 mb-4" type="submit" name="submit" value="Enviar formulário">
             </div>    
 
             

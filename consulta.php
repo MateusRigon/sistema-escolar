@@ -40,7 +40,10 @@
 
         <?php 
             if(isset($_POST['turma'])){
-                $c->exibeTotal(); 
+                $c->exibeTotalTurmas(); 
+            }
+            if(isset($_POST['aluno'])){
+                $c->exibeTotalAlunos(); 
             }
          ?>
         <div class="row">                  
@@ -50,9 +53,6 @@
             }
             if(isset($_POST['aluno'])){
                 $c->consultarAluno();
-                ?>
-                <div class="d-flex justify-content-center mt-2 mb-2"><?php echo $msg ?></div>
-                <?php
             }
 
          ?>
@@ -61,6 +61,9 @@
          <?php 
             if(isset($_POST['buttonTurma'])){
                 $c->exibeTurma();
+            }
+            if(isset($_POST['buttonAluno'])){
+                $c->exibeAluno();
             }
           ?>
           </div>

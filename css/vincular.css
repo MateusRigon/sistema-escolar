@@ -1,0 +1,27 @@
+.container #alunos {
+	border: 1px solid black;
+	width: 30vw;
+	height: 20vh;
+}
+.form-control{
+	width: 40vw;
+}
+.form-control option {
+	cursor: pointer;
+	font-size: 20px;
+}
+.form-control option:hover{
+	background-color: var(--blue);
+	color: white;
+}
+#divTurma #voltarpag{
+	border: none;
+	background-color: white;
+	font-size: 18px;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 40px;
+}
+#divTurma #voltarpag:hover{
+	text-decoration: underline;
+}

@@ -30,7 +30,7 @@
         </div>
       </div>
            <div class="buttons d-flex flex-column mb-3">
-            <button>Vincular alunos a turma</button>        
+            <button onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
         </div>
 
         <div class="buttons d-flex flex-column">

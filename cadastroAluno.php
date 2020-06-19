@@ -38,8 +38,8 @@
                 <label for="sexo">Sexo <span class="requireDot"> * </span></label>
                 <select class="select" name="sexo" required>
                   <option disabled selected value id="primeiraOption">--Escolha o sexo--</option>
-                  <option value="masc">Masculino</option>
-                  <option value="femin">Feminino</option>
+                  <option>Masculino</option>
+                  <option>Feminino</option>
                 </select>
             </div>    
             <div class="d-flex flex-column">

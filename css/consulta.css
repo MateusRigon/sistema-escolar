@@ -29,7 +29,7 @@ fieldset{
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-.row form .buttonTurma{
+.row form .buttonTurmaAluno{
 	cursor: pointer;
 	border: none;
 	border-radius: 8px;
@@ -38,8 +38,11 @@ fieldset{
 	color: white;
 	outline: none;
 }
-.row form .buttonTurma:hover{
+.row form .buttonTurmaAluno:hover{
 	border: 1px solid black;
+}
+.row form #btnCollor{
+	background-color: var(--success);
 }
 #exibeTurma #voltarpag{
 	border: none;
@@ -51,21 +54,39 @@ fieldset{
 #exibeTurma #voltarpag:hover{
 	text-decoration: underline;
 }
-.dadosTurma p{
+.dadosGeral p{
 	font-size: 20px;
 }
-.dadosTurma span{
+.dadosGeral span{
 	color: black;
 	font-weight: 500;
 }
-textarea{
-   resize: none;
+#desc{
    width: 45vw;
    height: auto;
-   outline: none;
    border-top: 1px solid #bdb9b9;
    border-bottom: 1px solid #bdb9b9;
    border-right: none;
    border-left: none; 
    padding: 20px;
+}
+.row .nullResult{
+	margin-left: 22vw;
+}
+.row #divAlunos{
+	margin: auto 5vw auto 5vw;
+	border-bottom: 1px solid #bdb9b9;
+	border-top: 1px solid #bdb9b9;
+	padding: 20px 20px 10px 20px;
+}
+.row form #buttonMatricula{
+	padding: 10px;
+	font-size: 18px;
+	cursor: pointer;
+	background-color: var(--success);
+	color: white;
+	border: none;
+}
+.form-final{
+	margin: 15vw 50px 50px 50px;
 }

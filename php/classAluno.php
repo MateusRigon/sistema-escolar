@@ -22,7 +22,7 @@ class Aluno{
 			<?php
 		}else{
 
-		$cadastrar = "INSERT INTO alunos(nome,sexo,dataDeNacimento,cidade,rua,numero,bairro,complemento) 
+		$cadastrar = "INSERT INTO alunos(nome,sexo,dataDeNascimento,cidade,rua,numero,bairro,complemento) 
 					  VALUES('$nome','$sexo','$data','$cidade','$rua','$numero','$bairro','$complemento')";
 		$query = mysqli_query($conexao, $cadastrar);			  
 

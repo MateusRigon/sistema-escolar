@@ -40,8 +40,8 @@
                      ?>
                     </select>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <input type="submit" name="next" value="Próximo ->">
+                <div class="d-flex justify-content-end mb-5 mt-5">
+                    <input class="buttonVincular" type="submit" name="next" value="Próximo" disabled="true">
                 </div>
                 
                 </form>
@@ -57,34 +57,67 @@
                 <div class="d-flex justify-content-center">
                 <form method="POST">
                  <div class="form-group">
-                    <select name="alunos" multiple class="form-control mt-3" id="exampleFormControlSelect2" required>
+                    <select name="turmas" multiple class="form-control mt-3" id="exampleFormControlSelect2" required>
                       <?php 
                         $v->exibeTurma();
-                     ?>
+                      ?>
                     </select>
+                    <?php 
+                        if(isset($_POST['next'])){
+                            $v->salvaNome();
+                        }
+
+                    ?>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <input type="submit" name="pronto" value="Pronto">
+                <div class="d-flex justify-content-end mb-5 mt-5">
+                    <input class="buttonVincular" type="submit" name="pronto" value="Pronto" disabled="true">
                 </div>
                 
                 </form>
                 </div>
+                
+
             </div>
-         
-    </div>
-                 <?php 
+                <?php 
                     if (isset($_POST['next'])) {
-                        $v->pegaNome();
+                        ?>
+                        <script>
+                            document.querySelector('#divAluno').style.display = "none";
+                            document.querySelector('#divTurma').style.display = "block";
+                        </script>
+                        <?php
                     }
+
+                    if(isset($_POST['pronto'])){
+                        $v->updateTurma();
+                        ?>
+                        <script>
+                            document.querySelector('#divAluno').style.display = "none";
+                            document.querySelector('#divTurma').style.display = "none";
+                        </script>
+                        <div id="success" class="flex-column mt-2 mb-5" style="display: flex;"> 
+                            <h3 class="d-flex justify-content-center"><?php echo $msgSucesso ?: $msgErro; ?></h3>
+                             <h3 class="d-flex justify-content-center"><?php echo $msgSucesso2 ?></h3>
+                             <h3 class="d-flex justify-content-center"><?php echo $msgSucesso3 ?></h3>
+                             <h3 class="d-flex justify-content-center mt-1"><?php echo $msgErro2 ?></h3>   
+                            <a id="addMore" class="d-flex justify-content-center mt-3" href="#">Vincular mais alunos</a> 
+                        </div>
+                        <?php
+
+                    }
+              
                  ?>
     
+                
+    </div>
+
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/aluno.js"></script>
+    <script type="text/javascript" src="js/vincular.js"></script>
   </body>
 </html>

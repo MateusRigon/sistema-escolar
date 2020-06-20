@@ -30,7 +30,7 @@
       <form method="POST" class="form-group flex-column p-4" style="display: flex;">
           <h1 class="mb-5 mt-3">Cadastro de alunos</h1>
               <div class="d-flex flex-column">
-                <label for="nome">Nome <span class="requireDot"> * </span></label>
+                <label for="nome">Nome Completo <span class="requireDot"> * </span></label>
                 <input type="text" name="nome" required>
                 </div>
           <div class="d-flex">

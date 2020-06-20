@@ -25,7 +25,8 @@
                                                 <h3>Turma <?php echo $array['numTurma']?></h3>
                                                 <?php 
                                                 $copia = $array;
-												unset($copia['professorRegente'],$copia['descricao'],$copia['numVagas']);
+												unset($copia['professorRegente'],$copia['descricao'],
+													  $copia['numVagas'],$copia['numAlunos']);
                                                  ?>
                                          		<?php echo "<input type='hidden' name='numTurmaCopia' value='" . implode($copia) . "'>"; ?>
                                             </button>
@@ -57,6 +58,9 @@
 												<p class="mr-5">Professor: <span><?php echo $array['professorRegente']?></span></p>
 												<p>Total de vagas: <span><?php echo $array['numVagas']?></span></p>
 										</div>
+										<div class="dadosGeral d-flex justify-content-center">
+											<p>Total de alunos: <span><?php echo $array['numAlunos'] ?></span></p>
+										</div>	
 										<div class="d-flex justify-content-center">
 											<div id="desc"><?php echo $array['descricao']?></div>
 										</div>
@@ -101,12 +105,13 @@
 										<form method="POST" class="d-flex justify-content-center">
                                             <button id="btnCollor" class="buttonTurmaAluno" name="buttonAluno">
                                             <h3><?php echo mb_substr($array['nome'], 0, 15)?><?php if (strlen($array['nome']) >= 15):?>...<?php endif ?>
+
                                             </h3>
                                                 <?php 
                                                 $copia = $array;
 												unset($copia['nome'],$copia['sexo'],$copia['dataDeNascimento'],
 													  $copia['dataDeNascimento'],$copia['cidade'],$copia['rua'],
-													  $copia['numero'],$copia['bairro'],$copia['complemento']);
+													  $copia['numero'],$copia['bairro'],$copia['complemento'],$copia['turma']);
                                                  ?>
                                          		<?php echo "<input type='hidden' name='matriculaAluno' value='" . implode($copia) . "'>"; ?>
                                             </button>
@@ -127,7 +132,8 @@
 			$data = date('d/m/Y', strtotime($array['dataDeNascimento']));
 
 			if (empty($array['cidade']) || empty($array['numero']) || 
-				empty($array['bairro']) || empty($array['complemento'])) {
+				empty($array['bairro']) || empty($array['complemento']) ||
+				empty($array['turma'])) {
 				$msgVazio = "Vazio";
 			}
 
@@ -142,7 +148,7 @@
 							<div class="dadosGeral" id="divAlunos"> 
 								<div class="d-flex">
 								<p class="mr-5">Matrícula: <span><?php echo $array['matricula']?></span></p>
-								<p>Turma: <span><?php echo $array['matricula']?></span></p>
+								<p>Turma: <span><?php echo $array['turma'] ?: $msgVazio?></span></p>
 								</div>
 								<div class="d-flex">
 								<p class="mr-5">Sexo: <span><?php echo $array['sexo'] ?></span></p>									

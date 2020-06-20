@@ -25,3 +25,17 @@
 #divTurma #voltarpag:hover{
 	text-decoration: underline;
 }
+.container input{
+	cursor: pointer;
+}
+
+.container input:hover{
+	cursor:not-allowed
+}
+.container #success #addMore{
+	color: #fc5e03;
+}
+.container .buttonVincular{
+	font-size: 20px;
+	padding: 5px;
+}

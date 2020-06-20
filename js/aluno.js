@@ -18,3 +18,6 @@ function getCidades(click){
 	});
 }
 
+function clicar(){
+	alert("ola")
+}

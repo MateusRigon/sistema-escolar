@@ -12,9 +12,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <link rel="stylesheet" type="text/css" href="CSS/cadastro.css">
-     <link rel="stylesheet" type="text/css" href="CSS/cadastroTurmas.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+     <link rel="stylesheet" type="text/css" href="css/cadastroTurmas.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
     <title>Cadastro de Turmas</title>
@@ -26,7 +26,7 @@
     </div>
 
     <div class="container d-flex flex-column">
-      
+
       <form method="POST" class="form-group flex-column p-4" style="display: flex;">
           <h1 class="mb-5 mt-3">Cadastro de turmas</h1>
               <div class="d-flex flex-column">
@@ -36,7 +36,7 @@
           <div class="d-flex">
             <div class="d-flex flex-column pr-5">
                 <label for="vagas">Quantidade de vagas</label>
-               <input type="number" name="vagas" required min="0" value="0">
+               <input type="number" name="vagas" required min="1" value="1">
             </div>    
             <div class="d-flex flex-column w-100">
                 <label for="professor">Professor regente</label>
@@ -76,6 +76,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/aluno.js"></script>
+    <script type="text/javascript" src="js/ocultaDiv.js"></script>
   </body>
 </html>

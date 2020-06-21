@@ -4,7 +4,7 @@ class Aluno{
 
  	function cadastrarAluno(){
  		require 'db.php';
-
+ 		//cadastra o aluno no sistema
 		$nome = $_POST['nome'];
 		$sexo = $_POST['sexo'];
 		$data = $_POST['data'];

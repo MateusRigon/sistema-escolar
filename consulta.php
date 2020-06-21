@@ -1,7 +1,16 @@
 <?php 
     require 'php/db.php';
     require 'php/classConsulta.php';
+    require 'php/excluirDados.php';
+    $excluir = new Excluir();
     $c = new Consulta();
+    //excluir dados
+    if(isset($_POST['excluirTurma'])){
+        $excluir->excluirTurma();
+    }   
+    if(isset($_POST['excluirAluno'])){
+        $excluir->excluirAluno();
+    }
  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,14 +21,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <link rel="stylesheet" type="text/css" href="CSS/home.css">
-    <link rel="stylesheet" type="text/css" href="CSS/consulta.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/consulta.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
     <title>Consulta</title>
   </head>
   <body onload='window.scrollTo({top: 200, behavior: "smooth"});'>
+
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
         <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
@@ -66,10 +77,45 @@
                 $c->exibeAluno();
             }
           ?>
+
           </div>
+          
+
     </div>
-
-
+        <!-- modal da turma -->
+         <div id="modal">
+                <div>
+                    <h1>Tem Certeza?</h1>
+                </div>
+                <div>
+                    <form method="POST">
+                        <div class="d-flex">
+                            <button class="btn-1 mr-4" name="excluirTurma">Sim</button>   
+                            <button class="btn-2" name="nao">Não</button>
+                        </div>
+                        <!-- da echo no numero da turma e matricula do aluno-->
+                        <?php echo $inputDadosTurma; ?>
+                    </form>
+                    
+                </div>
+            </div> 
+            <!-- modal do aluno -->
+            <div id="modal" class="modal-2">
+                <div>
+                    <h1>Tem Certeza?</h1>
+                </div>
+                <div>
+                    <form method="POST">
+                        <div class="d-flex">
+                            <button class="btn-1 mr-4" name="excluirAluno">Sim</button>    
+                            <button class="btn-2" name="nao">Não</button>
+                        </div>
+                        <!-- da echo no numero da turma e matricula do aluno-->
+                        <?php echo $inputDadosAluno; ?>
+                    </form>
+                    
+                </div>
+            </div>     
 
 
     <!-- Optional JavaScript -->
@@ -77,6 +123,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/aluno.js"></script>
+    <script type="text/javascript" src="js/ocultaDiv.js"></script>
   </body>
 </html>

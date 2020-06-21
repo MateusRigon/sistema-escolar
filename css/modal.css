@@ -1,0 +1,31 @@
+#modal{
+	background-color: #0E0A12ef;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	visibility:hidden;
+	justify-content: center;
+	align-items: center;
+	transition: 400ms;
+}
+#modal h1, h3{
+	color: white;
+}
+#modal form button{
+	font-size: 20px;
+	cursor: pointer;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	padding: 10px;
+	outline: none;
+}
+#modal form .btn-1 {
+	background-color: var(--success);
+}
+#modal form .btn-2 {
+	background-color: var(--danger);
+}

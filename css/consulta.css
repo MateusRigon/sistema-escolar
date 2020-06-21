@@ -4,6 +4,7 @@ body{
 .container{
 	margin-top: 100px;
 	height: auto;
+	padding-bottom: 50px; 
 }
 #buttons .button-group button{
 	width: 100px;
@@ -79,7 +80,7 @@ fieldset{
 	border-top: 1px solid #bdb9b9;
 	padding: 20px 20px 10px 20px;
 }
-.row form #buttonMatricula{
+#buttonMatricula{
 	padding: 10px;
 	font-size: 18px;
 	cursor: pointer;
@@ -89,4 +90,7 @@ fieldset{
 }
 .form-final{
 	margin: 10vw 50px 50px 50px;
+}
+.divButtons{
+	margin: 0px 50px 50px 50px;
 }

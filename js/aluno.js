@@ -1,9 +1,3 @@
-$('#addMore').click(function(){
-	$('#success').css("display","none");
-	$('.form-group').css("display", "flex");
-});
-
-
 //pega todas cidades do RS
 $("select[name=cidade]").click(getCidades);
 
@@ -16,8 +10,4 @@ function getCidades(click){
 			city.append(`<option value="${cidade.nome}">${cidade.nome}</option>`);
 		}
 	});
-}
-
-function clicar(){
-	alert("ola")
 }

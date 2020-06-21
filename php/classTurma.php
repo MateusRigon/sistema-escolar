@@ -4,7 +4,7 @@ class Turma {
 
 	function cadastrarTurma(){
 		require 'db.php';
-
+		//cadastra a turma no sistema
 		$descricao = $_POST['desc'];
 		$qntVagas = $_POST['vagas'];
 		$professor = $_POST['professor'];

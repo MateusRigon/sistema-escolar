@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Jun-2020 às 01:26
+-- Tempo de geração: 22-Jun-2020 às 04:42
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.3
 
@@ -44,6 +44,25 @@ CREATE TABLE `alunos` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `login`
+--
+
+CREATE TABLE `login` (
+  `codigo` int(11) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `senha` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `login`
+--
+
+INSERT INTO `login` (`codigo`, `usuario`, `senha`) VALUES
+(1, 'admin', '1234');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `turmas`
 --
 
@@ -66,6 +85,12 @@ ALTER TABLE `alunos`
   ADD PRIMARY KEY (`matricula`);
 
 --
+-- Índices para tabela `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`codigo`);
+
+--
 -- Índices para tabela `turmas`
 --
 ALTER TABLE `turmas`
@@ -79,13 +104,19 @@ ALTER TABLE `turmas`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+
+--
+-- AUTO_INCREMENT de tabela `login`
+--
+ALTER TABLE `login`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `turmas`
 --
 ALTER TABLE `turmas`
-  MODIFY `numTurma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `numTurma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

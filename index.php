@@ -1,3 +1,13 @@
+<?php 
+  session_start();
+
+  if (isset($_POST['sair'])) {
+    unset($_SESSION['admin']);
+    header("location: loginPage.php");
+    session_destroy();
+  }
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,38 +24,50 @@
     <title>Home</title>
   </head>
   <body>
-    <div class="header d-flex justify-content-between">
-        <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
-        <p>Logado como Admin!</p>
-    </div>
+    <?php
 
-    <div class="container d-flex flex-column">
-  
-      <div class="d-flex">
-        <div class="buttons mb-3 d-flex flex-column w-50 mr-5">
-            <button onclick="window.location.href='cadastroAluno.php'">Cadastrar novo aluno</button>
-        </div>
-        <div class="buttons d-flex flex-column w-50">
-          <button onclick="window.location.href='cadastroTurma.php'">Cadastrar nova turma</button> 
-        </div>
-      </div>
-           <div class="buttons d-flex flex-column mb-3">
-            <button onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
+      if(isset($_SESSION['admin'])) { ?> 
+        <div class="header d-flex justify-content-between">
+            <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
+            <div class="d-flex">
+            <p class="mr-5 mt-3"><?php echo $_SESSION['admin']; ?></p>
+              <form method="POST" class="form-inline my-2 my-lg-0">
+                <button id="sair" class="btn btn-outline-success" type="submit" name="sair">Sair</button>
+              </form>
+            </div>
         </div>
 
-        <div class="buttons d-flex flex-column">
-            <button onclick="window.location.href='consulta.php'">Consultar turmas e alunos</button>        
+        <div class="container d-flex flex-column">
+      
+          <div class="d-flex">
+            <div class="buttons mb-3 d-flex flex-column w-50 mr-5">
+                <button onclick="window.location.href='cadastroAluno.php'">Cadastrar novo aluno</button>
+            </div>
+            <div class="buttons d-flex flex-column w-50">
+              <button onclick="window.location.href='cadastroTurma.php'">Cadastrar nova turma</button> 
+            </div>
+          </div>
+               <div class="buttons d-flex flex-column mb-3">
+                <button onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
+            </div>
+
+            <div class="buttons d-flex flex-column">
+                <button onclick="window.location.href='consulta.php'">Consultar turmas e alunos</button>        
+            </div>
+             
         </div>
-         
-    </div>
+    <?php } else { ?>
+        <div class="header d-flex justify-content-between">
+            <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
+              <a href="loginPage.php" style="text-decoration: underline;">Faça Login para acessar o site!</a>
+        </div>
 
-
-
-
+    <?php } ?>        
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/home.js"></script>
   </body>
 </html>

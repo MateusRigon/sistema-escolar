@@ -4,6 +4,7 @@
     require 'php/excluirDados.php';
     $excluir = new Excluir();
     $c = new Consulta();
+    session_start();
     //excluir dados
     if(isset($_POST['excluirTurma'])){
         $excluir->excluirTurma();
@@ -30,7 +31,8 @@
     <title>Consulta</title>
   </head>
   <body onload='window.scrollTo({top: 200, behavior: "smooth"});'>
-
+    <?php 
+    if(isset($_SESSION['admin'])) { ?> 
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
         <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
@@ -116,7 +118,13 @@
                     
                 </div>
             </div>     
+    <?php } else { ?>
+        <div class="header d-flex justify-content-between">
+            <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
+              <a href="loginPage.php" style="text-decoration: underline;">Faça Login para acessar o site!</a>
+        </div>
 
+    <?php } ?> 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

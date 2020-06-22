@@ -2,6 +2,7 @@
   require 'php/db.php';
   require 'php/classTurma.php';
   $turmas = new Turma();  
+  session_start();
  ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -20,6 +21,8 @@
     <title>Cadastro de Turmas</title>
   </head>
   <body>
+    <?php 
+    if(isset($_SESSION['admin'])) { ?> 
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
         <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
@@ -67,7 +70,13 @@
 
     </div>
     
+<?php } else { ?>
+        <div class="header d-flex justify-content-between">
+            <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
+              <a href="loginPage.php" style="text-decoration: underline;">Faça Login para acessar o site!</a>
+        </div>
 
+    <?php } ?>
 
 
 

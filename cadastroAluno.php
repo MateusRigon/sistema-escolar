@@ -2,6 +2,7 @@
   require 'php/db.php'; 
   require_once 'php/classAluno.php'; 
   $alunos = new Aluno();
+  session_start();
  ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,8 @@
     <title>Cadastro de alunos</title>
   </head>
   <body>
+    <?php 
+    if(isset($_SESSION['admin'])) { ?> 
     <div class="header d-flex justify-content-between">
         <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
         <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>
@@ -99,7 +102,13 @@
      
     </div>
     
+<?php } else { ?>
+        <div class="header d-flex justify-content-between">
+            <h1><span><i class="fas fa-graduation-cap"></i></span>School</h1>
+              <a href="loginPage.php" style="text-decoration: underline;">Faça Login para acessar o site!</a>
+        </div>
 
+    <?php } ?>
 
 
 

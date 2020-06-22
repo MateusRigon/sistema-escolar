@@ -1,0 +1,35 @@
+#modal{
+	background-color: #0E0A12ef;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	visibility: visible;
+	justify-content: center;
+	align-items: center;
+	transition: 400ms;
+}
+#modal h1, label{
+	color: white;
+}
+#modal form{
+	width: 25vw;
+	font-size: 20px;
+}
+#modal form input{
+	border-radius: 10px;
+	border: 1px solid black;
+	outline: none;
+	height: 8vh;
+	padding: 10px;
+}
+#modal form .submit{
+	cursor: pointer;
+	border: 1px solid var(--success);
+}
+#modal #msgErro{
+	font-size: 15px;
+	color: #fc5e03;
+}

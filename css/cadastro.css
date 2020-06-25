@@ -27,3 +27,12 @@
 .form-group .submit:hover{
 	border: 1px solid var(--light);
 }
+.btnMargin50{
+	width: 50%;
+}
+.btnsDisplay{
+	display: flex;
+}
+#btnSexo{
+	margin-right: 50px;
+}

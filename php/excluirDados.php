@@ -4,11 +4,21 @@
 		function excluirAluno(){
 			require 'db.php';
 			$matricula = $_POST['excluirPorMatricula'];
+
+			$selectTurma = "SELECT turma FROM alunos WHERE matricula = '$matricula'";
+			$query = mysqli_query($conexao, $selectTurma);
+			$array = mysqli_fetch_assoc($query);
+			$turma = $array['turma'];
+			$onlyNumberTurma = preg_replace("/[^0-9]/","", $turma);
 			
 			$excluir = "DELETE FROM alunos WHERE matricula = '$matricula'";
-			$query = mysqli_query($conexao, $excluir);
+			$query2 = mysqli_query($conexao, $excluir);
 
-			if($query){
+			if($query2){
+				$update =  "UPDATE turmas 
+							SET numVagas = numVagas+1,numAlunos = numAlunos-1 
+							WHERE numTurma = '$onlyNumberTurma'";
+				$query3 = mysqli_query($conexao, $update);
 				?>
 					<script>
 						alert("Aluno excluido!");
@@ -31,6 +41,18 @@
 			$query = mysqli_query($conexao, $excluir);
 
 			if($query){
+				$select = "SELECT * FROM alunos";
+				$query2 = mysqli_query($conexao, $select);
+				$array = mysqli_fetch_assoc($query2);
+				$turma = $array['turma'];
+				$onlyNumberTurma = preg_replace("/[^0-9]/","", $turma);
+
+				if(isset($turma)){
+					if($onlyNumberTurma == $numTurma){
+						$update = "UPDATE alunos SET turma = 'NULL'";
+						$query3 = mysqli_query($conexao, $update);
+					}
+				}
 				?>
 					<script>
 						alert("Turma excluida!");

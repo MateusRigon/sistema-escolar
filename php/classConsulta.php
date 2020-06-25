@@ -4,7 +4,7 @@
 		function consultarTurma(){
 			require 'db.php';
 			global $msg;
-			//mostra todas as turmas em vários butões
+			//mostra todas as turmas em vários botões
 			$busca = "SELECT * FROM turmas";
 			$query = mysqli_query($conexao, $busca);
 			$array = mysqli_fetch_assoc($query);
@@ -49,7 +49,7 @@
 				if($total > 0){
 					do {
 						?>
-								<input id="voltarpag" type="button" value="Voltar" onclick="window.history.back()"/>
+								<input id="voltarpag" type="button" value="Voltar">
 								<div class="row flex-column mt-5 mb-5">
 										<div class="d-flex justify-content-center mb-3">
 											<h2>Turma <?php echo $array['numTurma']?></h2>
@@ -63,7 +63,7 @@
 											<p>Total de alunos: <span><?php echo $array['numAlunos'] ?></span></p>
 										</div>	
 										<div class="d-flex justify-content-center">
-											<div id="desc"><?php echo $array['descricao']?></div>
+											<div id="desc"><?php echo $array['descricao'];?></div>
 										</div>
 										<form method="POST" class="form-final d-flex justify-content-end">
 											<?php 
@@ -101,7 +101,7 @@
 		function consultarAluno(){
 			require 'db.php';
 			global $msg;
-			//mostra todos os alunos em vários butões
+			//mostra todos os alunos em vários botões
 			$busca = "SELECT * FROM alunos";
 			$query = mysqli_query($conexao, $busca);
 			$array = mysqli_fetch_assoc($query);

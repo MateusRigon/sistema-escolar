@@ -1,7 +1,6 @@
 .header p{
 	font-size: 18px;
 }
-
 .container{
 	padding: 25px;
 	margin-top: 10vh;
@@ -15,4 +14,12 @@
 .container .buttons button:hover{
 	border: 2px solid black;
 }
-
+.container #cadastroBtn{
+	display: flex;
+}
+#cadastroBtn #btnAluno{
+	margin-right: 50px;
+}
+#cadastroBtn #btnAluno, #btnTurma{
+	width: 50%;
+}

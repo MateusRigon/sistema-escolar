@@ -13,3 +13,6 @@ $(".buttonExcluirAluno").click(function(){
 $("button[name=nao]").click(function(){
 	$("#modal").css("visibility", "hidden");
 })
+$("#voltarpag").click(function(){
+	location.href='consulta.php'
+})

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 800px){
+	.container{width: 80%;}
+	#sessionMsg{ display: none; }
+	.form-group .submit{ width: 100%; }
+}
+@media only screen and (max-width: 590px){
+	.container{width: 100%;}
+	.container #cadastroBtn{display: block;}
+	#cadastroBtn #btnAluno, #btnTurma{ 
+		width: 100%; 
+	}
+	#btnTurma{ margin-bottom: 20px; }
+	.btnsDisplay{ display: block; }
+	.btnMargin50{ width: 100%; }
+	.header{margin-left: 20px; width: 90%;}
+	#btnSexo{ margin-right: 20px; }
+}

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
     <title>Cadastro de alunos</title>
@@ -37,7 +38,7 @@
                 <input type="text" name="nome" required>
                 </div>
           <div class="d-flex">
-            <div class="d-flex flex-column pr-5">
+            <div id="btnSexo" class="d-flex flex-column">
                 <label for="sexo">Sexo <span class="requireDot"> * </span></label>
                 <select class="select" name="sexo" required>
                   <option disabled selected value id="primeiraOption">--Escolha o sexo--</option>
@@ -53,17 +54,17 @@
           </div>      
                 
             <div class="d-flex">    
-             <div class="d-flex flex-column w-50">
-                <label for="cidade">Cidade</label>
-                <select class="select" name="cidade" required>
-                  <option disabled selected value="">Selecione a cidade</option>
+             <div class="btnMargin50 d-flex flex-column">
+                <label for="cidade">Cidade <span class="requireDot"> * </span></label>
+                <select class="select mb-2" name="cidade" required>
+                  <option disabled selected value>Selecione a cidade</option>
                 </select>
             </div>
             
             </div>      
 
-            <div class="d-flex">    
-             <div class="d-flex flex-column w-100 pr-5">
+            <div class="btnsDisplay" class="d-flex">    
+             <div id="btnRua" class="d-flex flex-column w-100 mr-5">
                 <label for="cidade">Rua</label>
                <input type="text" name="rua">
             </div>
@@ -72,12 +73,12 @@
                <input type="text" name="numero">
             </div>
             </div> 
-            <div class="d-flex">
-               <div class="d-flex flex-column w-50 pr-5">
+            <div class="btnsDisplay" class="d-flex">
+               <div class="btnMargin50 d-flex flex-column mr-5">
                 <label for="cidade">Bairro</label>
                <input type="text" name="bairro">
             </div>
-             <div class="d-flex flex-column w-50">
+             <div class="btnMargin50 d-flex flex-column">
                 <label for="cidade">Complemento</label>
                <input type="text" name="complemento">
             </div>

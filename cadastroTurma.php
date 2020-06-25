@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-     <link rel="stylesheet" type="text/css" href="css/cadastroTurmas.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastroTurmas.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
 
     <title>Cadastro de Turmas</title>
@@ -33,16 +34,16 @@
       <form method="POST" class="form-group flex-column p-4" style="display: flex;">
           <h1 class="mb-5 mt-3">Cadastro de turmas</h1>
               <div class="d-flex flex-column">
-                <label for="desc">Descrição</label>
+                <label for="desc">Descrição <span class="requireDot"> * </span></label>
                 <textarea name="desc" required placeholder="Descrição da turma"></textarea>
                 </div>
-          <div class="d-flex">
+          <div class="btnsDisplay">
             <div class="d-flex flex-column pr-5">
-                <label for="vagas">Quantidade de vagas</label>
+                <label for="vagas">Quantidade de vagas <span class="requireDot"> * </span></label>
                <input type="number" name="vagas" required min="1" value="1">
             </div>    
             <div class="d-flex flex-column w-100">
-                <label for="professor">Professor regente</label>
+                <label for="professor">Professor regente <span class="requireDot"> * </span></label>
                <input type="text" name="professor" placeholder="Nome do professor" required>
             </div>
   

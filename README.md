@@ -4,7 +4,8 @@ Instruções de uso:
 
 1. Baixar e salvar arquivos em C:\xampp\htdocs ou pasta www caso use outro servidor
 2. Iniciar Apache e MySQL
-3. Importar dump da base de dados em localhost/phpmyadmin (Pasta dump db)
+3. Abrir localhost/phpmyadmin e criar o banco de dados "sistemaescolar"
+3. Importar dump da base de dados (Pasta dump db)
 4. Abrir arquivo index.php no LocalHost do navegador
 
 Fluxo de uso:

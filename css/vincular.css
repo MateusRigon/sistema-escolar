@@ -1,3 +1,9 @@
+.header p{
+	font-size: 18px;
+}
+.container{
+	padding: 25px;
+}
 .container #alunos {
 	border: 1px solid black;
 	width: 30vw;

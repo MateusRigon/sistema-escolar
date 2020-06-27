@@ -14,9 +14,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/vincular.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
     <title>Vincular</title>
   </head>
@@ -53,7 +53,7 @@
             </div>
 
             <div id="divTurma" style="display: none;">
-                <input id="voltarpag" type="button" value="Voltar" onclick="window.history.back()"/>
+                <input id="voltarpag" type="button" value="Voltar">
                 <div id="buttons" class="d-flex justify-content-around">
                     <h3>Selecione a Turma</h3>
                 </div>

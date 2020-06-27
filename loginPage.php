@@ -26,6 +26,9 @@
   <body>
 
        <div id="modal">
+            <header>
+              <a href="index.php"><span><i class="fas fa-arrow-left"></i></span>Voltar para home</a>  
+            </header>
                 <div>
                     <h1>Login</h1>
                 </div>
@@ -39,10 +42,10 @@
                       </div>  
                         <input class="mb-2" type="text" name="user" required> 
                         <label for="senha">Senha</label>
-                        <input type="text" name="senha" required>
+                        <input type="password" name="senha" required>
                         <input class="submit mt-4 btn-success" type="submit" name="logar" value="ENTRAR">
                     </form>
-                    
+                          
                 </div>
             </div> 
             
@@ -51,6 +54,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/home.js"></script>
+    
   </body>
 </html>

@@ -33,3 +33,14 @@
 	font-size: 15px;
 	color: #fc5e03;
 }
+header a{
+	margin-left: 65vw;
+	color: white;
+	text-decoration: none;
+}
+header a:hover{
+	color: white;
+}
+header span i{
+	margin-right: 10px;
+}

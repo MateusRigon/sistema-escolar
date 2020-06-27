@@ -1,23 +1,76 @@
-.header p{
-	font-size: 18px;
+body{
+	background-image: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
+}
+html {
+    height: 100%;
+}
+span{
+	color: #fc5e03;
 }
 .container{
+	background-color: white;
+	height: auto;
+	width: 60%;
+	margin: 10vh auto auto auto;
 	padding: 25px;
-	margin-top: 10vh;
+}
+.header{
+	margin: 10vh auto auto 15vw;
+	width: 70%;
+	align-items: center;
+	font-family: 'Pangolin', cursive;
+}
+.header a{
+	font-size: 18px;
+	text-decoration: none;
+	color: black;
+}
+.header #sessionMsg{
+	font-size: 18px;
+}
+.header span i{
+	margin-right: 10px;
+}
+.container hr{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color: gray;
+  height: 1px;
+  margin: 30px auto 30px auto;
 }
 .container .buttons button{
-	height: 40px;
-	font-size: 18px;
-	border: 1px solid black;
+	color: white;
+	height: 45px;
+	font-size: 20px;
 	cursor: pointer;
+	border-radius: 25px;
+	outline: none;
+}
+.container .btnVC button{
+	background-color: #fc5e03;
+	border: 1px solid #fc5e03;
 }
 .container .buttons button:hover{
-	border: 2px solid black;
+	border: 1px solid var(--light);
+}
+.container #btnTurma button{
+	border: 1px solid var(--warning);
+}
+.container #btnAluno button{
+	border: 1px solid var(--success);
+}
+.container #cadastroBtn button:hover{
+	border: 1px solid var(--light);
 }
 .container #cadastroBtn{
 	display: flex;
 }
-#cadastroBtn #btnAluno{
+#cadastroBtn #btnTurma{
 	margin-right: 50px;
 }
 #cadastroBtn #btnAluno, #btnTurma{

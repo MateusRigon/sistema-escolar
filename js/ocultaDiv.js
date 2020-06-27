@@ -1,7 +1,7 @@
 //oculta a div de sucesso e mostra novamente o cadastro	
 $("#addMore").click(function(){
-	$("#success").hide('slow');
-	$(".form-group").show('slow');
+	$("#success").hide();
+	$(".form-group").show();
 });
 //mostra a div modal na consulta
 $(".buttonExcluirTurma").click(function(){
@@ -13,6 +13,7 @@ $(".buttonExcluirAluno").click(function(){
 $("button[name=nao]").click(function(){
 	$("#modal").css("visibility", "hidden");
 })
+//voltar btn
 $("#voltarpag").click(function(){
 	location.href='consulta.php'
 })

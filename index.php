@@ -17,10 +17,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
     <title>Home</title>
   </head>
@@ -39,20 +39,23 @@
         </div>
 
         <div class="container d-flex flex-column">
-      
+          <div>
+            <h5>Bem-Vindo a plataforma de gerenciamento escolar!</h5>
+          </div>
+          <hr>
           <div id="cadastroBtn">
-            <div id="btnAluno" class="buttons mb-3 d-flex flex-column">
-                <button onclick="window.location.href='cadastroAluno.php'">Cadastrar novo aluno</button>
+            <div id="btnTurma" class="buttons mb-3 d-flex flex-column">
+              <button class="btn btn-warning" onclick="window.location.href='cadastroTurma.php'">Cadastrar nova turma</button> 
             </div>
-            <div id="btnTurma" class="buttons d-flex flex-column">
-              <button onclick="window.location.href='cadastroTurma.php'">Cadastrar nova turma</button> 
+            <div id="btnAluno" class="buttons d-flex flex-column">
+                <button class="btn btn-success" onclick="window.location.href='cadastroAluno.php'">Cadastrar novo aluno</button>
             </div>
           </div>
-               <div class="buttons d-flex flex-column mb-3">
+            <div class="buttons btnVC d-flex flex-column mb-3">
                 <button onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
             </div>
 
-            <div class="buttons d-flex flex-column">
+            <div class="buttons btnVC d-flex flex-column">
                 <button onclick="window.location.href='consulta.php'">Consultar turmas e alunos</button>        
             </div>
              

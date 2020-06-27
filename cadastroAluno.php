@@ -18,10 +18,11 @@
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <script src="https://kit.fontawesome.com/9e177e207c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
     <title>Cadastro de alunos</title>
   </head>
-  <body>
+  <body onload='window.scrollTo({top: 200, behavior: "smooth"});'>
     <?php 
     if(isset($_SESSION['admin'])) { ?> 
     <div class="header d-flex justify-content-between">

@@ -1,5 +1,8 @@
 body{
-	background-color: var(--light);
+	background-color: #eee;
+}
+html {
+    height: 100%;
 }
 span{
 	color: #fc5e03;
@@ -9,11 +12,16 @@ span{
 	height: auto;
 	width: 60%;
 	margin: 20vh auto 35vh auto;
+	padding: 25px; 
+}
+.header p{
+	font-size: 18px;
 }
 .header{
 	margin: 10vh auto auto 15vw;
 	width: 70%;
 	align-items: center;
+	font-family: 'Pangolin', cursive;
 }
 .header a{
 	font-size: 18px;

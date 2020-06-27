@@ -13,3 +13,6 @@ $("#addMore").click(function(){
 	$("#success").hide('slow');
 	$("#divAluno").show('slow');
 })
+$("#voltarpag").click(function(){
+	location.href='vincular.php'
+})

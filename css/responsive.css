@@ -9,7 +9,7 @@
 	#cadastroBtn #btnAluno, #btnTurma{ 
 		width: 100%; 
 	}
-	#btnTurma{ margin-bottom: 20px; }
+	#btnAluno{ margin-bottom: 20px; }
 	.btnsDisplay{ display: block; }
 	.btnMargin50{ width: 100%; }
 	.header{margin-left: 20px; width: 90%;}

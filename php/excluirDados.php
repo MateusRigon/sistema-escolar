@@ -46,7 +46,7 @@
 				$array = mysqli_fetch_assoc($query2);
 				$turma = $array['turma'];
 				$onlyNumberTurma = preg_replace("/[^0-9]/","", $turma);
-
+				
 				if(isset($turma)){
 					if($onlyNumberTurma == $numTurma){
 						$update = "UPDATE alunos SET turma = 'NULL'";

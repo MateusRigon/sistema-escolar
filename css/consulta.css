@@ -22,6 +22,13 @@ fieldset{
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
+.dadosGeral p{
+	font-size: 20px;
+}
+.dadosGeral span{
+	color: black;
+	font-weight: 500;
+}
 .row form .buttonTurmaAluno{
 	cursor: pointer;
 	border: none;
@@ -47,21 +54,12 @@ fieldset{
 #exibeTurma #voltarpag:hover{
 	text-decoration: underline;
 }
-.dadosGeral p{
-	font-size: 20px;
+.container .form-group textarea{
+	margin-bottom: 10px;
+	height: 20vh;
 }
-.dadosGeral span{
-	color: black;
-	font-weight: 500;
-}
-#desc{
-   width: 45vw;
-   height: auto;
-   border-top: 1px solid #bdb9b9;
-   border-bottom: 1px solid #bdb9b9;
-   border-right: none;
-   border-left: none; 
-   padding: 20px;
+.btnsDisplay{
+	display: flex;
 }
 .row .nullResult{
 	margin-left: 22vw;
@@ -84,5 +82,29 @@ fieldset{
 	margin: 10vw 50px 50px 50px;
 }
 .divButtons{
-	margin: 0px 50px 50px 50px;
+	margin: 50px 0px 20px 0px;
+}
+.container .form-group input{
+	margin-bottom: 10px;
+	height: 40px;
+	outline: none;
+}
+.container .form-group label{
+	font-size: 18px;
+}
+.form-group .requireDot{
+	color: red;
+}
+.form-group .select{
+	height: 40px;
+}
+.dadosAluno p{
+	font-size: 20px;
+}
+.dadosAluno span{
+	color: black;
+}
+#alterar{
+	color: gray;
+	margin-top: 80px;
 }

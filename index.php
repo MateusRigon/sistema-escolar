@@ -51,12 +51,12 @@
                 <button class="btn btn-success" onclick="window.location.href='cadastroAluno.php'">Cadastrar novo aluno</button>
             </div>
           </div>
-            <div class="buttons btnVC d-flex flex-column mb-3">
-                <button onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
+            <div class="buttons d-flex flex-column mb-3">
+                <button class="btn btn-danger" onclick="window.location.href='vincular.php'">Vincular alunos a turma</button>        
             </div>
 
-            <div class="buttons btnVC d-flex flex-column">
-                <button onclick="window.location.href='consulta.php'">Consultar turmas e alunos</button>        
+            <div class="buttons d-flex flex-column">
+                <button class="btn btn-danger" onclick="window.location.href='consulta.php'">Consultar turmas e alunos</button>        
             </div>
              
         </div>

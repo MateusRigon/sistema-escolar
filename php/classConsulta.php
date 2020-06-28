@@ -1,4 +1,5 @@
 <?php 
+
 	class Consulta{
 
 		function consultarTurma(){
@@ -50,21 +51,43 @@
 					do {
 						?>
 								<input id="voltarpag" type="button" value="Voltar">
-								<div class="row flex-column mt-5 mb-5">
+								<div class="row flex-column mt-5">
 										<div class="d-flex justify-content-center mb-3">
-											<h2>Turma <?php echo $array['numTurma']?></h2>
+											<h1>Turma <?php echo $array['numTurma']?></h1>
+										</div>
+										<div class="dadosAluno d-flex justify-content-center">
+											<p>Total de alunos: <span><?php echo $array['numAlunos'] ?></span></p>
 										</div>
 										
-										<div class="dadosGeral d-flex justify-content-center"> 									
-												<p class="mr-5">Professor: <span><?php echo $array['professorRegente']?></span></p>
-												<p>Total de vagas: <span><?php echo $array['numVagas']?></span></p>
-										</div>
-										<div class="dadosGeral d-flex justify-content-center">
-											<p>Total de alunos: <span><?php echo $array['numAlunos'] ?></span></p>
-										</div>	
-										<div class="d-flex justify-content-center">
-											<div id="desc"><?php echo $array['descricao'];?></div>
-										</div>
+										<form method="POST" class="form-group flex-column p-4" style="display: flex;">
+											<input type="hidden" name="numTurma" value='<?php echo $array['numTurma']?>'>
+								              <div class="d-flex flex-column">
+								                <label for="desc">Descrição <span class="requireDot"> * </span></label>
+								                <textarea name="desc" required ><?php echo $array['descricao'] ?></textarea>
+								                </div>
+								          <div class="btnsDisplay d-flex ">
+								            <div class="d-flex flex-column pr-5">
+								                <label for="vagas">Quantidade de vagas <span class="requireDot"> * </span></label>
+								               <input type="number" name="vagas" required value='<?php echo $array['numVagas'] ?>'>
+								            </div>    
+								            <div class="d-flex flex-column w-100">
+								                <label for="professor">Professor regente <span class="requireDot"> * </span></label>
+								               <input type="text" name="professor" value='<?php echo $array['professorRegente'] ?>' required>
+								            </div>
+								  
+								          </div> 
+								          <div id="alterar">
+								          	<p>* Mude algum campo para salvar as alterações</p>
+								          </div>
+											<div class="divButtons d-flex justify-content-end">
+												<button style="display: none;" name="editarTurma" class="mr-4" id="buttonMatricula">Salvar</button>
+												<button type="button" class="buttonExcluirTurma" id="buttonMatricula">Excluir Turma</button>
+											</div> 
+    									</form>
+    									
+    										
+    								
+    									
 										<form method="POST" class="form-final d-flex justify-content-end">
 											<?php 
 			                                    $copia = $array;
@@ -74,10 +97,6 @@
 											<?php $inputDadosTurma = "<input type='hidden' name='excluirPorNumTurma' value='" 
 																	. implode($copia) . "'>"; ?>
 										</form>
-										<div class="divButtons d-flex justify-content-end">
-											<button name="editar" class="mr-4" id="buttonMatricula">Editar</button>
-											<button class="buttonExcluirTurma mr-4" id="buttonMatricula">Excluir Turma</button>
-										</div>
 								</div> 
 								
 						<?php

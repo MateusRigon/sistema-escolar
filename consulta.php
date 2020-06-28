@@ -2,7 +2,9 @@
     require 'php/db.php';
     require 'php/classConsulta.php';
     require 'php/excluirDados.php';
+    require 'php/classEditar.php';
     $excluir = new Excluir();
+    $editar = new Editar();
     $c = new Consulta();
     session_start();
     //excluir dados
@@ -11,6 +13,10 @@
     }   
     if(isset($_POST['excluirAluno'])){
         $excluir->excluirAluno();
+    }
+    //editar dados
+    if (isset($_POST['editarTurma'])) {
+        $editar->editarTurma();
     }
  ?>
 <!DOCTYPE html>

@@ -17,3 +17,7 @@ $("button[name=nao]").click(function(){
 $("#voltarpag").click(function(){
 	location.href='consulta.php'
 })
+//habilita botão de editar
+$("textarea[name=desc], input[name=vagas], input[name=professor]").change(function(){
+	$("button[name=editarTurma]").show();
+})

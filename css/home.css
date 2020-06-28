@@ -1,5 +1,5 @@
 body{
-	background-image: url(https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80);
+	background-image: url(../background/img-background.jpg);
 	background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
@@ -51,9 +51,10 @@ span{
 	border-radius: 25px;
 	outline: none;
 }
-.container .btnVC button{
+.container .btn-danger{
 	background-color: #fc5e03;
 	border: 1px solid #fc5e03;
+	border-color: #fc5e03;
 }
 .container .buttons button:hover{
 	border: 1px solid var(--light);

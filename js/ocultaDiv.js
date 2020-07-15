@@ -21,3 +21,6 @@ $("#voltarpag").click(function(){
 $("textarea[name=desc], input[name=vagas], input[name=professor]").change(function(){
 	$("button[name=editarTurma]").show();
 })
+$("input[name=nome], select[name=sexo], input[name=data], select[name=cidade], input[name=rua], input[name=numero], input[name=bairro], input[name=complemento]").change(function(){
+	$("button[name=editarAluno]").show();
+})

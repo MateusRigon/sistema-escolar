@@ -16,7 +16,7 @@ class Aluno{
 		global $msgErro;
 		global $msgSucesso;
 
-		if(empty($nome) || empty($sexo) || empty($data)){
+		if(empty($nome) || empty($sexo) || empty($data) || empty($cidade)){
 			?>
 			<div class="d-flex justify-content-center"><?php die("Erro ao cadastrar/Algum item está vazio"); ?></div>
 			<?php

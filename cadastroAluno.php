@@ -66,21 +66,21 @@
 
             <div class="btnsDisplay" class="d-flex">    
              <div id="btnRua" class="d-flex flex-column w-100 mr-5">
-                <label for="cidade">Rua</label>
+                <label for="rua">Rua</label>
                <input type="text" name="rua">
             </div>
             <div class="d-flex flex-column">
-                <label for="cidade">Número</label>
+                <label for="numero">Número</label>
                <input type="text" name="numero">
             </div>
             </div> 
             <div class="btnsDisplay" class="d-flex">
                <div class="btnMargin50 d-flex flex-column mr-5">
-                <label for="cidade">Bairro</label>
+                <label for="bairro">Bairro</label>
                <input type="text" name="bairro">
             </div>
              <div class="btnMargin50 d-flex flex-column">
-                <label for="cidade">Complemento</label>
+                <label for="complemento">Complemento</label>
                <input type="text" name="complemento">
             </div>
             </div>

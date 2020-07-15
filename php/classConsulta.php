@@ -168,7 +168,7 @@
 			if (empty($array['cidade']) || empty($array['numero']) || 
 				empty($array['bairro']) || empty($array['complemento']) ||
 				empty($array['turma'])) {
-				$msgVazio = "Vazio";
+				$msgVazio = "Não preenchido";
 			}
 
 			do {
@@ -178,27 +178,81 @@
 							<div class="nome d-flex justify-content-center mb-5">
 								<h2><?php echo $array['nome']?></h2>
 							</div>
+					<form method="POST" class="form-group flex-column p-4" style="display: flex;">
+          				  <div class="d-flex justify-content-center mb-5">
+				            <div class="d-flex flex-column mr-5">
+				                <h5>Matrícula: <?php echo $array['matricula'] ?: $msgVazio; ?></h5>
+				                <input type="hidden" name="matricula" value='<?php echo $array['matricula']?>'>
+				            </div>    
+				            <div class="d-flex flex-column">
+				                <h5>Turma: <?php echo $array['turma'] ?: $msgVazio; ?></h5>
+				            </div>
+				  
+				          </div>
+              			  <div class="d-flex flex-column">
+			                <label for="nome">Nome Completo <span class="requireDot"> * </span></label>
+			                <input type="text" name="nome" value='<?php echo $array['nome']; ?>' required>
+			              </div>
+				          <div class="d-flex">
+				            <div id="btnSexo" class="d-flex flex-column mr-5">
+				                <label for="sexo">Sexo <span class="requireDot"> * </span></label>
+				                <select class="select" name="sexo" required>
+				                  <option id="primeiraOption"><?php echo $array['sexo']; ?></option>
+				                  <option>Masculino</option>
+				                  <option>Feminino</option>
+				                </select>
+				            </div>    
+				            <div class="d-flex flex-column">
+				                <label for="data">Data de nascimento <span class="requireDot"> * </span></label>
+				               <input type="date" name="data" value='<?php echo $array['dataDeNascimento']; ?>' required>
+				            </div>
+				  
+				          </div>      
+			                
+				            <div class="d-flex">    
+				             <div class="btnMargin50 d-flex flex-column">
+				                <label for="cidade">Cidade <span class="requireDot"> * </span></label>
+				                <select class="select mb-2" name="cidade" required>
+				                  <option><?php echo $array['cidade']; ?></option>
+				                </select>
+				            </div>
+				            
+				            </div>      
 
-							<div class="dadosGeral" id="divAlunos"> 
-								<div class="d-flex">
-								<p class="mr-5">Matrícula: <span><?php echo $array['matricula']?></span></p>
-								<p>Turma: <span><?php echo $array['turma'] ?: $msgVazio?></span></p>
-								</div>
-								<div class="d-flex">
-								<p class="mr-5">Sexo: <span><?php echo $array['sexo'] ?></span></p>									
-								<p>Nascimento: <span><?php echo $data ?></span></p>
-								</div>
-								<div class="d-flex">
-								<p class="mr-5">Cidade: <span><?php echo $array['cidade'] ?: $msgVazio ?></span></p>	
-								<p>Rua: <span><?php echo $array['rua'] ?: $msgVazio ?></span></p>
-								</div>
-								<div class="d-flex">
-								<p class="mr-5">Número: <span><?php echo $array['numero'] ?: $msgVazio ?></span></p>	
-								<p class="mr-5">Bairro: <span><?php echo $array['bairro'] ?: $msgVazio ?></span></p>
-								<p>Complemento: <span><?php echo $array['complemento'] ?: $msgVazio ?></span></p>
-								</div>
+				            <div class="btnsDisplay" class="d-flex">    
+				             <div id="btnRua" class="d-flex flex-column w-100 mr-5">
+				                <label for="rua">Rua</label>
+				               <input type="text" name="rua" placeholder='<?php echo $msgVazio ?>' value='<?php echo $array['rua']; ?>'>
+				            </div>
+				            <div class="d-flex flex-column">
+				                <label for="numero">Número</label>
+				               <input type="text" name="numero" placeholder='<?php echo $msgVazio ?>'value='<?php echo $array['numero']; ?>'>
+				            </div>
+				            </div> 
+				            <div class="btnsDisplay" class="d-flex">
+				               <div class="btnMargin50 d-flex flex-column mr-5">
+				                <label for="bairro">Bairro</label>
+				               <input type="text" name="bairro" placeholder='<?php echo $msgVazio ?>' value='<?php echo $array['bairro']; ?>'>
+				            </div>
+				             <div class="btnMargin50 d-flex flex-column">
+				                <label for="complemento">Complemento</label>
+				               <input type="text" name="complemento" placeholder='<?php echo $msgVazio ?>' value='<?php echo $array['complemento']; ?>'>
+				            </div>
+				            </div>
+
+				            <div id="alterar">
+								<p>* Mude algum campo para salvar as alterações</p>
 							</div>
-							<form method="POST" class="form-final d-flex justify-content-end">
+
+				            <div class="divButtons d-flex justify-content-end">
+									<button style="display: none;" name="editarAluno" class="mr-4" id="buttonMatricula">Salvar</button>
+									<button type="button" class="buttonExcluirAluno mr-4" id="buttonMatricula">Excluir Aluno</button>
+									<button type="button" id="buttonMatricula">Gerar Matrícula</button>
+							</div>   
+      				</form>
+
+
+      						<form method="POST" class="form-final d-flex justify-content-end">
 								<?php 
                                     $copia = $array;
 									unset($copia['nome'],$copia['sexo'],$copia['dataDeNascimento'],
@@ -207,11 +261,7 @@
                                     ?>
 							<?php $inputDadosAluno = "<input type='hidden' name='excluirPorMatricula' value='" . implode($copia) . "'>"; ?>							
 							</form>
-							<div class="divButtons d-flex justify-content-end">
-								<button name="editar" class="mr-4" id="buttonMatricula">Editar</button>
-								<button  class="buttonExcluirAluno mr-4" id="buttonMatricula">Excluir Aluno</button>
-								<button id="buttonMatricula">Gerar Matrícula</button>
-							</div>
+							
 						</div> 
 				<?php
 			} while ($array = mysqli_fetch_assoc($query));
